@@ -1,6 +1,6 @@
 ---
 title: Edvai Tp Final
-emoji: 🐠
+emoji: 🏠
 colorFrom: pink
 colorTo: pink
 sdk: gradio
@@ -10,11 +10,22 @@ pinned: false
 license: mit
 ---
 
-### Si querés ingresar a la APP: https://huggingface.co/spaces/carlageier/edvai_tp_final
-### Una captura de pantalla de la aplicación en funcionamiento:
+# 🏠 Predictor de Precios de Propiedades en Argentina
+
+Esta aplicación utiliza un modelo de Machine Learning para predecir el precio de propiedades en Buenos Aires y el Gran Buenos Aires (GBA) en dólares estadounidenses (USD).
+
+## 🔗 Enlace a la aplicación
+
+**👉 [Acceder a la aplicación en Hugging Face](https://huggingface.co/spaces/carlageier/edvai_tp_final)**
+
+## 📸 Captura de pantalla
+
 ![image](https://cdn-uploads.huggingface.co/production/uploads/690e1efa53bc701928522cb6/bQ7UTWaT5INwY9b5nlBUZ.png)
 
-### Un ejemplo de uso del endpoint que proporciona Gradio una vez desplegado:
+## 🚀 Uso mediante API
+
+Puedes consumir el modelo a través de la API usando la biblioteca `gradio_client`:
+
 ```python
 # Instalar la biblioteca gradio_client
 !pip install gradio_client
@@ -46,10 +57,10 @@ Loaded as API: https://carlageier-edvai-tp-final.hf.space ✔
 '$190,250 USD'
 ```
 
-### Ejemplos adicionales:
+## 💡 Ejemplos adicionales
 
 ```python
-# Predicción para una casa en Belgrano
+# Predicción para un departamento en Belgrano
 result2 = client.predict(
     rooms=4,
     bedrooms=3,
@@ -85,4 +96,29 @@ print(result3)
 '$285,000 USD'
 '$95,000 USD'
 ```
+
+## 🛠️ Características técnicas
+
+- **Modelo:** Random Forest optimizado
+- **Características utilizadas:** 
+  - Ambientes, dormitorios, baños
+  - Superficie total y cubierta
+  - Localidad (codificada por frecuencia)
+  - Tipo de propiedad (One-Hot Encoding)
+  - Zona geográfica (One-Hot Encoding)
+- **Framework:** Gradio para la interfaz web
+- **Despliegue:** Hugging Face Spaces
+
+## 📊 Datos
+
+El modelo fue entrenado con datos de propiedades en venta en CABA y GBA, con información de precios en dólares USD correspondiente al período 2019-2020.
+
+## 🎯 Funcionalidades
+
+- Predicción de precios en tiempo real
+- Interfaz intuitiva con controles deslizantes y dropdowns
+- Ejemplos predefinidos para testing rápido
+- API consumible programáticamente
+
+---
 
