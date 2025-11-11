@@ -120,5 +120,9 @@ El modelo fue entrenado con datos de propiedades en venta en CABA y GBA, con inf
 - Ejemplos predefinidos para testing rápido
 - API consumible programáticamente
 
+## Comentario personal final:
+No obstante se trata de un trabajo académico, a mí criterio falta como features fundamentales la antigüedad y estado de los inmuebles. 
+No contábamos con este dato en el data set, quizás sí en REGEX de Descripción. 
 ---
+
 
